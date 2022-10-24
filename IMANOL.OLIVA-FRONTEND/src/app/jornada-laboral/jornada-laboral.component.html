@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row justify-content-center t-6">
+        <div class="col">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">ALTA JORNADA LABORAL</button>
+                        <form [formGroup]="form">
+                            <div class="form-group">
+                            <div class="dropdown-menu">
+                                <select class="form-control" formControlName="idJornadaLaboral" (change)="inabilitar($event)">
+                                    <option value="1" >PART TIME</option>
+                                    <option value="2">FULL TIME</option>
+                                    <option value="3">HORAS EXTRA</option>                                        
+                                    <option value="4">VACACIONES</option>
+                                    <option value="5">DIA LIBRE</option>
+                                 </select>
+                                <input class="form-control" requerid type="text" formControlName="fechaDeEntrada" placeholder="Fecha entrada:yyyy-MM-HH">
+                                <input class="form-control"  type="text" formControlName="horaDeEntrada" placeholder="Hora de entrada">
+                                <input class="form-control"  type="text" formControlName="horaDeSalida" placeholder="Hora de Salida">
+                                <input class="form-control"  type="text" formControlName="dni" placeholder="Dni Empleado">
+                                <button class="btn btn-info" (click)="guardarJornada()">Cargar Jornada Laboral</button>            
+                                </div>
+                            </div> 
+                        </form>
+                    </div>
+                </div>
+        </div>    
+</div>

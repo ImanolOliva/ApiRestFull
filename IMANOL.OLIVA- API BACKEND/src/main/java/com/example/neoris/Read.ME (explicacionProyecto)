@@ -1,0 +1,53 @@
+
+
+
+
+######################## Desarrollador : Imanol Oliva ##########################################
+
+                        - ACTUALIZACION Y DETALLES A TENER EN CUENTA -
+
+# 1 -La API con respecto al TP N2  fue terminada en su totalidad,salvando las ultimas validaciones de los dias libres y las fechas.
+
+# 2 -Se agregaron metodos(Los cuales se detallan a continuacion)y una clase DTO para transferir los datos que llegan del frontend al backend.
+
+# 3- listarPorEmpleadosPorJornada: Listar empleados y su cantidad de horas trabajadas por cada tipo de jornada laboral.
+Recibe una lista de Jornadas y las va acomodando según su empleado y su jornada laboral. (El codigo esta comentado a detalle)
+
+# 4- ActualizarJornadaLaboral: Punto 5 TP 2. Implementa el metodo updateEmpleados de empleados creado de 0 el cual tiene una Query a la base de datos
+que me permite modificar el empleado y en su posterior paso guardarlo
+
+# 5- Creación de una clase para el uso de Validaciones
+
+# 6- Creación de una clase DTO GuardarJornadaLaboralDTO con el fin de recibir los datos que llegan desde el frontend
+y validarlos cuando se los asigno a su jornada Laboral si es que corresponden.
+
+
+#7- Implementacion del metodo guardarJornadaLaboral en el controller de Jornada. Sirve exclusivamente para guardar la jornada laboral
+que viene desde el frontend en la base de datos.
+Dentro de el metodo se implementan a su ves otros metodos: Paso a detallarlos.
+
+    A- inicializarJornada(): Lo que hace este metodo es inicializar las jornadas con un valor por defecto asi
+    el usuario cuando escoga el metodo en el select de TiposDeJornadaLaboral no llegue nulo al servidor ni a la
+    base de datos-
+
+    B-Buscar Empleado por dni:  para la legibilidad del usuario y que no tenga que buscar por ID, si no mas
+    bien por DNI. Dicho metodo se implementa con su respectiva Query a la base de datos que hace que me traiga los empleados por su DNI
+    y hacer que matchen si son el mismo que recibimos desde el frontend.
+
+    C-Listar Jornada aboral por id,Listamos las jornadas laborales por su Id que se los voy a estar inicializando por defecto
+    cuando levanto la app.
+
+
+####################################################################################################
+
+
+API de turnos Rotativos.
+
+La api se desarrolla bajo un patron de diseno REST
+con sus diferentes capaz de abstraccion
+Controller,Modelo,DTO,Service,Repository.
+Por cuestiones personales  no se llego al cumplimiento de lo requerido al 100%  en el TP pero
+se pudieron realizar  avances sobre el mismo hasta el punto 4.
+Se pudieron hacer algunas validaciones.
+Se envia esta copia pero va a seguir desarrollandose con el fin de terminarlo para el fin de lab a modo de seguir
+sumando conocimiento y practica.

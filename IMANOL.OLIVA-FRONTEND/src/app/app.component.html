@@ -1,0 +1,23 @@
+
+<h1 style="text-align: center" > IMANOL OLIVA S.A</h1>
+
+<div class="container p-5">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="dropdown">
+             <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">ALTA EMPLEADO</button>
+                <div class="dropdown-menu">
+                    <form [formGroup]="form">
+                    <div class="form-group">
+                        <input class="form-control" type="text" formControlName="nombre" placeholder="Ingrese nombre">
+                        <input class="form-control" type="email" formControlName="email" placeholder="Ingrese email">
+                        <input class="form-control" type="text" formControlName="dni" placeholder="Ingrese dni">
+                    </div>
+                    <button class="btn btn-info" (click)="guardarEmpleado()">Cargar Empleado</button>            
+            </form>
+        </div>
+      </div>
+    </div>
+    <app-jornada-laboral></app-jornada-laboral>
+</div>
+
